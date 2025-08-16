@@ -24,7 +24,7 @@ function App() {
       setLoading(true) // ✅ start loader
       setReview("")    // clear old review
 
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code })
+      const response = await axios.post('https://reviewmate-gkzz.onrender.com/ai/get-review', { code })
       setReview(response.data.review || response.data) // ✅ ensure correct field
     } catch (err) {
       setReview("❌ Error while fetching review.")
